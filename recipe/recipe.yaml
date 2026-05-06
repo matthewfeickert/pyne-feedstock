@@ -27,6 +27,9 @@ source:
     - cython3-test-strict-utf8.patch
     - numpy2-compat.patch
     - use-scipy-integrate-trapezoid.patch
+    # Drop after pyne v0.7.7
+    # c.f. https://github.com/pyne/pyne/pull/1502
+    - use-std-isnan-instead-of-macro.patch
 
 build:
   number: ${{ build_number }}
