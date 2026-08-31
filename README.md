@@ -17,7 +17,179 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/pyne-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/pyne-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
+    
+  <tr>
+    <td>Azure</td>
+    <td>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>osx_64_enable_moabmoabenable_openmcnoopenmchdf51.14.4python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabmoabenable_openmcnoopenmchdf51.14.4python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabmoabenable_openmcopenmchdf51.14.6python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabmoabenable_openmcopenmchdf51.14.6python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabmoabenable_openmcopenmchdf51.14.6python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabmoabenable_openmcopenmchdf51.14.6python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabmoabenable_openmcopenmchdf51.14.6python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabmoabenable_openmcopenmchdf51.14.6python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabnomoabenable_openmcnoopenmchdf51.14.4python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabnomoabenable_openmcnoopenmchdf51.14.4python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabnomoabenable_openmcopenmchdf51.14.6python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabnomoabenable_openmcopenmchdf51.14.6python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabnomoabenable_openmcopenmchdf51.14.6python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabnomoabenable_openmcopenmchdf51.14.6python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_enable_moabnomoabenable_openmcopenmchdf51.14.6python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_enable_moabnomoabenable_openmcopenmchdf51.14.6python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_enable_moabmoabenable_openmcnoopenmchdf51.14.6python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_enable_moabnomoabenable_openmcnoopenmchdf51.14.4python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_enable_moabnomoabenable_openmcnoopenmchdf51.14.4python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5454&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyne-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_enable_moabnomoabenable_openmcnoopenmchdf51.14.6python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </td>
+  </tr>
 </table>
 
 Current release info
@@ -37,31 +209,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pyne` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install pyne
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install pyne
 ```
 
-It is possible to list all of the versions of `pyne` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add pyne
+# for installing globally
+pixi global install pyne
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `pyne` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search pyne --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search pyne --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search pyne --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -73,6 +287,8 @@ mamba repoquery whoneeds pyne --channel conda-forge
 # List dependencies of `pyne`:
 mamba repoquery depends pyne --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -144,6 +360,7 @@ Feedstock Maintainers
 * [@bam241](https://github.com/bam241/)
 * [@gonuke](https://github.com/gonuke/)
 * [@kkiesling](https://github.com/kkiesling/)
+* [@matthewfeickert](https://github.com/matthewfeickert/)
 * [@opotowsky](https://github.com/opotowsky/)
 * [@scopatz](https://github.com/scopatz/)
 

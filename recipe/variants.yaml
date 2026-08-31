@@ -5,3 +5,19 @@ enable_moab:
 enable_openmc:
   - noopenmc
   - openmc
+
+# FIXME: Drop after Python 3.10 support is removed
+#
+# Build Python 3.10 against hdf5 1.14.4 and every other Python version against
+# the conda-forge global hdf5 pin. pytables has no Python 3.10 builds against
+# the global hdf5 1.14.6 pin (its newest Python 3.10 builds, 3.10.1, are
+# against hdf5 1.14.4), and pytables is needed in host for nuc_data_make.
+#
+# A recipe-level variant file cannot zip an extra key onto the global pinning's
+# `python` zip group (conda-build allows a key in only one zip_keys group), so
+# both hdf5 values are listed here, the full python x hdf5 matrix is rendered,
+# and the unwanted combinations are dropped by the build.skip conditions in
+# recipe.yaml. Keep the second entry in sync with the global hdf5 pin.
+hdf5:
+  - 1.14.4
+  - 1.14.6
