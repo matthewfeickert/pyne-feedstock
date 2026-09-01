@@ -78,6 +78,8 @@ requirements:
       then: moab
     - if: enable_openmc == "openmc"
       then: openmc
+  run_exports:
+    - ${{ pin_subpackage('pyne', upper_bound='x.x') }}
 
 tests:
   - package_contents:
