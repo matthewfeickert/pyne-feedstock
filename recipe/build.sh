@@ -11,21 +11,12 @@ fi
 # 'setup.py --slow' to ensure builds are compatible with rest of toolchain.
 export CONFIGURE_ARGS="--slow ${CONFIGURE_ARGS}"
 
-# CMake's FindHDF5 falls back to parsing H5_VERSION out of H5pubconf.h, but its
-# regex only accepts "X.Y.Z" or "X.Y.Z-patchN". hdf5 1.14.4 defines
-# H5_VERSION "1.14.4-3", which leaves HDF5_VERSION empty and makes pyne's
-# unquoted 'if(NOT (${HDF5_VERSION} VERSION_LESS 1.12.0))' check fail, so
-# derive the version from H5public.h and hand it to CMake explicitly.
-hdf5_version=$(awk '/^#define H5_VERS_(MAJOR|MINOR|RELEASE) /{v = v sep $3; sep="."} END{print v}' "${PREFIX}/include/H5public.h")
-echo "Using HDF5_VERSION=${hdf5_version}"
-
 # Install PyNE
 export VERBOSE=1
 ${PYTHON} setup.py install \
   --build-type="Release" \
   --prefix="${PREFIX}" \
   --hdf5="${PREFIX}" \
-  -D HDF5_VERSION="${hdf5_version}" \
   ${CONFIGURE_ARGS} \
   --clean \
   -j "${CPU_COUNT}"
