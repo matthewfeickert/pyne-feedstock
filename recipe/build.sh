@@ -6,14 +6,10 @@ if [[ -n "$enable_moab" && "$enable_moab" != "nomoab" ]]; then
 fi
 
 # pyne ships pre-assembled CRAM/decay sources only for x86_64
-# (cram-linux-gnu.s and cram-apple-clang.s are both x86_64). On
-# aarch64/arm64 the assembler rejects them, so disable fast-compile
-# and fall back to the portable C/C++ sources via setup.py --slow.
-case "${target_platform}" in
-  linux-aarch64|osx-arm64)
-    export CONFIGURE_ARGS="--slow ${CONFIGURE_ARGS}"
-    ;;
-esac
+# (cram-linux-gnu.s and cram-apple-clang.s are both x86_64).
+# Disable fast-compile and fall back to the portable C/C++ sources via
+# 'setup.py --slow' to ensure builds are compatible with rest of toolchain.
+export CONFIGURE_ARGS="--slow ${CONFIGURE_ARGS}"
 
 # CMake's FindHDF5 falls back to parsing H5_VERSION out of H5pubconf.h, but its
 # regex only accepts "X.Y.Z" or "X.Y.Z-patchN". hdf5 1.14.4 defines
