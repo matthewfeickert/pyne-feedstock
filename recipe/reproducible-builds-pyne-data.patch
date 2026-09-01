@@ -1,0 +1,56 @@
+From 0bc593de513e6808b46743c7afbc5d208d46ba2d Mon Sep 17 00:00:00 2001
+From: Matthew Feickert <matthew.feickert@cern.ch>
+Date: Tue, 1 Sep 2026 01:16:12 -0600
+Subject: [PATCH] fix: Use VCS commit SHA for reproducible builds
+
+* For the build system lock pyne/data products to the latest commit of
+  https://github.com/pyne/data/tree/77f1aa4b4c29e3b66f42f31658e598455e604227
+  to ensure reproducible builds into the future.
+* Intentionally leave tests in tests/test_ace.py to use the HEAD of pyne/data's
+  default branch to test against the upstream data and code source.
+---
+ cmake/PyneMacros.cmake | 4 ++--
+ setup.py               | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/cmake/PyneMacros.cmake b/cmake/PyneMacros.cmake
+index 14bf4aee..d3210600 100644
+--- a/cmake/PyneMacros.cmake
++++ b/cmake/PyneMacros.cmake
+@@ -214,11 +214,11 @@ endmacro()
+ 
+ macro(pyne_download_platform)
+   # Download bateman solver from PyNE data
+-  download_platform("http://raw.githubusercontent.com/pyne/data/master" "decay"
++  download_platform("https://github.com/pyne/data/raw/77f1aa4b4c29e3b66f42f31658e598455e604227" "decay"
+                       ".cpp" ".s")
+ 
+   # Download CRAM solver from PyNE data
+-  download_platform("http://raw.githubusercontent.com/pyne/data/master" "cram"
++  download_platform("https://github.com/pyne/data/raw/77f1aa4b4c29e3b66f42f31658e598455e604227" "cram"
+                          ".c" ".s")
+ endmacro()
+ 
+diff --git a/setup.py b/setup.py
+index ae5ac919..0c1f93a5 100755
+--- a/setup.py
++++ b/setup.py
+@@ -129,13 +129,13 @@ DECAY_CPP = os.path.join('src', 'decay.cpp')
+ DECAY_S = glob('src/decay*.s')
+ DECAY_H_REP = os.path.join('src', '_decay.h')
+ DECAY_CPP_REP = os.path.join('src', '_decay.cpp')
+-DECAY_URL = 'http://raw.githubusercontent.com/pyne/data/master/decay.tar.gz'
++DECAY_URL = 'https://github.com/pyne/data/raw/77f1aa4b4c29e3b66f42f31658e598455e604227/decay.tar.gz'
+ 
+ 
+ CRAM_H = os.path.join('src', 'cram.h')
+ CRAM_C = os.path.join('src', 'cram.c')
+ CRAM_S = glob('src/cram*.s')
+-CRAM_URL = 'http://raw.githubusercontent.com/pyne/data/master/cram.tar.gz'
++CRAM_URL = 'https://github.com/pyne/data/raw/77f1aa4b4c29e3b66f42f31658e598455e604227/cram.tar.gz'
+ 
+ 
+ local_ensdf_evaluators = ['alphad', 'delta', 'gtol', 'bldhst', 'hsicc', 'hsmrg',
+-- 
+2.55.0
+

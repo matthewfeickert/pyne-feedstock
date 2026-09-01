@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   version: "0.7.5"
-  build_number: 2
+  build_number: 3
 
 package:
   name: pyne
@@ -30,6 +30,9 @@ source:
     # Drop after pyne v0.7.7
     # c.f. https://github.com/pyne/pyne/pull/1502
     - use-std-isnan-instead-of-macro.patch
+    # c.f. https://github.com/pyne/pyne/pull/1585
+    # NOTE: Will need to update beyond v0.7.5
+    - reproducible-builds-pyne-data.patch
 
 build:
   number: ${{ build_number }}
