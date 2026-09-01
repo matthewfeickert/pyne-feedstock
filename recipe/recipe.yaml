@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   version: "0.7.5"
-  build_number: 2
+  build_number: 3
 
 package:
   name: pyne
@@ -30,23 +30,21 @@ source:
     # Drop after pyne v0.7.7
     # c.f. https://github.com/pyne/pyne/pull/1502
     - use-std-isnan-instead-of-macro.patch
+    # c.f. https://github.com/pyne/pyne/pull/1585
+    # NOTE: Will need to update beyond v0.7.5
+    - reproducible-builds-pyne-data.patch
 
 build:
   number: ${{ build_number }}
   string: ${{ enable_moab }}_${{ enable_openmc }}py${{ python | version_to_buildstring }}h${{ hash }}_${{ build_number }}
   skip:
     - win
-    # hdf5 1.14.4 is ONLY for Python 3.10, everything else uses the global pin
-    # (both values come from variants.yaml)
-    - match(python, "3.10.*") and hdf5 != "1.14.4"
-    - not match(python, "3.10.*") and hdf5 == "1.14.4"
-    # No Python 3.10 builds of openmc exist against hdf5 1.14.4 (they stop at
-    # hdf5 1.14.3), and moab only has them for linux-64 and osx-64.
-    - match(python, "3.10.*") and enable_openmc == "openmc"
-    - match(python, "3.10.*") and enable_moab == "moab" and not x86_64
     # FIXME: Need linux-aarch64 and osx-arm64 builds for openmc
     # c.f. https://github.com/conda-forge/openmc-feedstock/issues/87
     - enable_openmc == "openmc" and not x86_64
+    # FIXME: No Python 3.14 builds of openmc exist yet (openmc 0.15.3 stops
+    # at Python 3.13), so the run environment is unsolvable.
+    - enable_openmc == "openmc" and match(python, "3.14.*")
   prefix_detection:
     ignore_binary_files: true
 
@@ -58,8 +56,6 @@ requirements:
     - cmake
     - make
     - pkg-config
-    # tools used in build.sh
-    - awk
   host:
     - python
     - setuptools
@@ -82,6 +78,8 @@ requirements:
       then: moab
     - if: enable_openmc == "openmc"
       then: openmc
+  run_exports:
+    - ${{ pin_subpackage('pyne', upper_bound='x.x') }}
 
 tests:
   - package_contents:
